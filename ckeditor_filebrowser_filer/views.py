@@ -97,9 +97,7 @@ def url_image(request, image_id, thumb_options=None, width=None, height=None):
         image = thumb
         url = image.url
     data = {
-        'url': url,
-        'width': image.width,
-        'height': image.height,
+        'url': url
     }
     return http.HttpResponse(json.dumps(data), content_type='application/json')
 
